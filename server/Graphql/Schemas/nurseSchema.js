@@ -8,6 +8,7 @@ var GraphQLString = require('graphql').GraphQLString;
 var GraphQLInt = require('graphql').GraphQLInt;
 
 
+
 const nurseType = new GraphQLObjectType({
     name: 'nurse',
     fields: function(){
@@ -43,3 +44,47 @@ const nurseType = new GraphQLObjectType({
 
 
 //TODO - mutations
+
+
+const querytype = new GraphQLObjectType({
+
+    name:'Query',
+    fields: function(){
+        return {
+            nurses: {
+                type: new GraphQLList(nurseType),
+                resolve: getNurse
+            }
+
+        }
+    }
+
+})
+
+const mutation = new GraphQLObjectType({
+    name: 'Mutation',
+    fields: function(){
+        return {
+            addVitals:{
+
+                type: nurseType,
+                args:{
+
+                    Name:{
+                        type: new GraphQLNonNull(GraphQLString)
+                    },
+
+                    
+                }
+            }
+        }
+    }
+})
+
+
+
+
+
+
+
+
