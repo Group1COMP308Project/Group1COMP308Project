@@ -7,7 +7,7 @@ var GraphQLID = require('graphql').GraphQLID;
 var GraphQLString = require('graphql').GraphQLString;
 var GraphQLInt = require('graphql').GraphQLInt;
 
-
+const {addVitals,updateVitals,getNurses} = require('../Resolvers/nurse-resolvers-server');
 
 const nurseType = new GraphQLObjectType({
     name: 'nurse',
@@ -74,16 +74,35 @@ const mutation = new GraphQLObjectType({
                         type: new GraphQLNonNull(GraphQLString)
                     },
 
+                    temperature: {
+                        type: new GraphQLNonNull(GraphQLInt)
+                    },
+                    heartrate: {
+                        type: new GraphQLNonNull(GraphQLInt)
+                    },
+                    bloodpressure: {
+                        type: new GraphQLNonNull(GraphQLInt)
+                    },
+
+                    hasvitiedbefore: {
+                        type: new GraphQLNonNull(GraphQLString)
+                    },
+                    medicalcoditions: {
+                        type: GraphQLNonNull(GraphQLString)
+                    },
+                    motivationtips: {
+                        type: GraphQLNonNull(GraphQLString)
+                    }
+                },
+                resolve: addVitals
+
+
                     
                 }
             }
         }
     }
-})
-
-
-
-
+)
 
 
 
