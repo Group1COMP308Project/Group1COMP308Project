@@ -1,0 +1,1 @@
+const Pateint = require('../Models/patient-models-server');
