@@ -5,14 +5,15 @@ const Schema = mongoose.Schema;
 
 const PatientSchema = new Schema({
 
-    firstName:String,
-    lastName:String,
-    age: String,
-    address: String,
-    dateOfBirth: String,
-    HealthCardNumber: String,
-    Gender: String,
-    email:String
+    Name:String,
+    Temperature: Number,
+    RespitoryRate: Number,
+    Bloodpressure: Number,
+    Weight:String,
+    PulseRate:String,
+    CovidSymptom:String,
+    Date: String
+
 
 
 });
