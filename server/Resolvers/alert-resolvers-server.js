@@ -1,0 +1,1 @@
+const Alert = require('../Models/alert-models-server');

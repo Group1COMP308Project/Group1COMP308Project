@@ -11,7 +11,8 @@ const PatientSchema = new Schema({
     address: String,
     dateOfBirth: String,
     HealthCardNumber: String,
-    Gender: String
+    Gender: String,
+    email:String
 
 
 });
