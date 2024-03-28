@@ -6,7 +6,7 @@ const NurseSchema = new Schema({
 
     Name:String,
     Temperature: Number,
-    Heartrate: Number,
+    respitoryrate: Number,
     Bloodpressure: Number,
     HasVisitedBefore: Boolean,
     MotivationTips: String,

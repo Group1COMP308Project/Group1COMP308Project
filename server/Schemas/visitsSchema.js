@@ -4,10 +4,10 @@ const visitSchema = gql`
   type Visit {
     id: ID!
     userId: ID!
-    bodyTemperature: Float!
+    bodytemperature: Float!
     heartRate: Int!
-    bloodPressure: String!
-    respiratoryRate: Int!
+    bloodpressure: String!
+    respiratorypate: Int!
     created: String!
   }
 
@@ -17,7 +17,7 @@ const visitSchema = gql`
   }
 
   extend type Mutation {
-    recordVisit(userId: ID!, bodyTemperature: Float!, heartRate: Int!, bloodPressure: String!, respiratoryRate: Int!): Visit
+    recordVisit(userId: ID!, bodyTemperature: Float!, heartrate: Int!, bloodpressure: String!, respiratoryrate: Int!): Visit
   }
 `;
 

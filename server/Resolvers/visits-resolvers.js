@@ -13,7 +13,7 @@ const resolvers = {
         heartRate,
         bloodPressure,
         respiratoryRate,
-        createdAt: new Date().toISOString(),
+        createdAt: new Date().toString(),
       });
       await visit.save();
       return visit;
