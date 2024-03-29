@@ -4,7 +4,10 @@ const Schema = mongoose.Schema;
 
 const NurseSchema = new Schema({
 
-    Name:String,
+    FirstName:String,
+    LastName: String,
+    Email: String,
+    Password: String,
     Temperature: Number,
     respitoryrate: Number,
     Bloodpressure: Number,
