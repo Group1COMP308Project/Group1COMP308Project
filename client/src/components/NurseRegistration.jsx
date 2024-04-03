@@ -1,8 +1,7 @@
-// NurseRegistration.jsx
+// // NurseRegistration.jsx
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
 
 function NurseRegistration() {
   const [formData, setFormData] = useState({
@@ -30,8 +29,16 @@ function NurseRegistration() {
     }
   };
 
-  console.log('NurseRegistration component is rendered.');
-  
+  // Log when the NurseRegistration component is rendered
+  useEffect(() => {
+    console.log('NurseRegistration component is mounted.');
+  }, []);
+
+  // Log form data changes
+  useEffect(() => {
+    console.log('Form data changed:', formData);
+  }, [formData]);
+
   return (
     <div>
       <h2>Nurse Registration</h2>
@@ -47,3 +54,17 @@ function NurseRegistration() {
 }
 
 export default NurseRegistration;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

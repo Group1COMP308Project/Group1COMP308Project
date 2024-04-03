@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
+
 function AuthenticationMicroFrontend() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
   const [role, setRole] = useState(null);
+  //const history = useHistory();
 
   const handleLogin = async (role, username, password) => { // Update handleLogin to accept username and password
     try {

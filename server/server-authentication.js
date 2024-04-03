@@ -53,6 +53,8 @@ app.post('/auth/patient/login', async (req, res) => {
   }
 });
 
+
+
 // Start the server
 app.listen(port, () => {
   console.log(`Authentication BFF listening on port ${port}`);
