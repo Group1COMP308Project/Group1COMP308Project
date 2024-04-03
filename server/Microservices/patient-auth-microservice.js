@@ -61,7 +61,7 @@ const typeDefs = gql`
   type Mutation {
     signup(userName: String!, email: String!, password: String!): User
     login(email: String!, password: String!): String
-    signupPatient(username: String!, password: String!): Nurse
+    signupPatient(username: String!, password: String!): Patient
     loginPatient(username: String!, password: String!): String
     logout: Boolean
   }
@@ -109,7 +109,7 @@ async function startApolloServer() {
 // Call the startApolloServer function to start the server
 startApolloServer().then(() => {
     // Start the Express server after the Apollo Server is started
-    const PORT = process.env.PORT || 3003;
+    const PORT = process.env.PORT || 3002;
     app.listen(PORT, () => {
       console.log(`Authentication Microservice listening on port ${PORT}`);
     });
