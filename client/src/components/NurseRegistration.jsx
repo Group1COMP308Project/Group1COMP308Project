@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+
 function NurseRegistration() {
   const [formData, setFormData] = useState({
     username: '',
@@ -29,6 +30,8 @@ function NurseRegistration() {
     }
   };
 
+  console.log('NurseRegistration component is rendered.');
+  
   return (
     <div>
       <h2>Nurse Registration</h2>

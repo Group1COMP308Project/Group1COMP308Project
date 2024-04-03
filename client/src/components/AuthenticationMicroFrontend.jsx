@@ -27,8 +27,10 @@ function AuthenticationMicroFrontend() {
 const handleRegister = (role) => {
   // Redirect the user to the registration page based on the selected role
   if (role === 'nurse') {
+    console.log("Redirecting to nurse registration page...");
     window.location.href = '/nurse-registration'; // Assuming the route for nurse registration is '/nurse-registration'
   } else if (role === 'patient') {
+    console.log("Redirecting to patient registration page...");
     window.location.href = '/patient-registration'; // Assuming the route for patient registration is '/patient-registration'
   }
 };
