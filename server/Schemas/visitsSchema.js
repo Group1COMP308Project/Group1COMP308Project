@@ -6,8 +6,8 @@ const visitSchema = gql`
     userId: ID!
     bodytemperature: Float!
     heartRate: Int!
-    bloodpressure: String!
-    respiratorypate: Int!
+    bloodpressure: Float!
+    respiratoryrate: Int!
     created: String!
   }
 
